@@ -1,0 +1,117 @@
+.page-header {
+    border-bottom: var(--border-header-color) 1px solid;
+
+}
+
+.header-layout,
+.page-header__navigation,
+.page-header__contacts-list,
+.page-header__navigation-links {
+    display: flex;
+}
+
+.navigation-layout,
+.page-header__navigation-links {
+    align-items: center;
+}
+
+.page-header__page-name {
+    position: relative;
+
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.page-header__contacts-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    fill: var(--font-color-p);
+    margin-right: 10px;
+    transition: fill var(--transition-dur-and-func);
+
+    .page-header__contacts-link:hover &,
+    .page-header__contacts-link:focus &{
+        fill: var(--accent-color);
+    }
+}
+
+.page-header__navigation-links,
+.page-header__contacts-list {
+    margin-left: auto;
+}
+
+.logo {
+    color: var(--accent-color);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+
+.page-header__logo {
+    color: var(--clear-black-color);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    padding: 24px 15px 25px 15px;
+    margin-right: 93px;
+}
+
+.page-header__page-link {
+    color: var(--font-color-h);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    padding: 32px 0;
+    letter-spacing: 0.02em;
+    transition: color var(--transition-dur-and-func);
+
+    &:hover,
+    &:focus{
+        color: var(--accent-color);
+    }
+}
+
+.current {
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: var(--accent-color);
+        border-radius: 2px;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.page-header__contacts-link {
+    color: var(--font-color-p);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    transition: color var(--transition-dur-and-func);
+
+    &:hover,
+    &:focus{
+        color: var(--accent-color);
+    }
+}
+
+.page-header__contacts-item:not(:last-child) {
+    margin-right: 50px;
+}
